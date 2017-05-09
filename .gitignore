@@ -1,0 +1,9 @@
+# output folders
+_Debug/
+Compiled/
+
+# temp and backup files
+Game.agf.bak
+Game.agf.user
+backup_acsprset.spr
+_OpenInEditor.lock
