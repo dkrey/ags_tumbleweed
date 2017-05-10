@@ -125,6 +125,7 @@ import void EnterRoom(this Character*, int newRoom, int x, int y, CharacterDirec
 // ============================= Verb GUI functions ============================================
 struct Verbs {
 // ============================= Helper functions ==============================================
+  import static float Distance(int x1, int y1, int x2, int y2);
   import static int  Offset(int point1, int point2);
   import static int  GetButtonAction(int action);
   import static void DisableGui();

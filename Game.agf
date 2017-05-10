@@ -93,7 +93,7 @@
       <SpriteCacheSize>128</SpriteCacheSize>
       <UseCustomSavePath>False</UseCustomSavePath>
       <CustomSavePath />
-      <TitleText xml:space="preserve">Empty Game Setup</TitleText>
+      <TitleText xml:space="preserve">Tumbleweed Setup</TitleText>
     </RuntimeSetup>
     <LipSync>
       <Type>None</Type>
