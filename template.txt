@@ -1,3 +1,4 @@
-You're using the Empty Game template!
+Welcome to the Tumbleweed Verbs template!
+When using this template, make sure you read the "tumbleweed.pdf" help file so that you understand how to use it!
 
-This template has no default graphics or items at all - it's totally empty. If this is your first experience with AGS, try using the Default Game template instead, as it already has enough default sprites imported to get you started.
+Have fun!
