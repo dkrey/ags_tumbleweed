@@ -1,4 +1,4 @@
 Welcome to the Tumbleweed Verbs template!
-When using this template, make sure you read the "tumbleweed.pdf" help file so that you understand how to use it!
+When using this template, make sure you take a look at the "tumbleweedverbs.pdf" manual so that you understand how to use it!
 
 Have fun!

@@ -7,3 +7,8 @@ Game.agf.bak
 Game.agf.user
 backup_acsprset.spr
 _OpenInEditor.lock
+
+# Sphinx Documentation folders
+doc/_build
+doc/_static
+doc/_templates
