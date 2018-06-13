@@ -80,6 +80,7 @@
     <RuntimeSetup>
       <GraphicsDriver>D3D9</GraphicsDriver>
       <Windowed>False</Windowed>
+      <FullscreenGameScaling>ProportionalStretch</FullscreenGameScaling>
       <GameScaling>MaxInteger</GameScaling>
       <GameScalingMultiplier>1</GameScalingMultiplier>
       <GraphicsFilter>stdscale</GraphicsFilter>
@@ -93,6 +94,8 @@
       <SpriteCacheSize>128</SpriteCacheSize>
       <UseCustomSavePath>False</UseCustomSavePath>
       <CustomSavePath />
+      <UseCustomAppDataPath>False</UseCustomAppDataPath>
+      <CustomAppDataPath IsNull="True" />
       <TitleText xml:space="preserve">Tumbleweed Setup</TitleText>
     </RuntimeSetup>
     <LipSync>
@@ -3010,8 +3013,16 @@ stop
               <SpriteFolder Name="fr">
                 <SubFolders />
                 <Sprites>
-                  <Sprite Slot="123" Width="50" Height="12" ColorDepth="32" Resolution="LowRes" AlphaChannel="False" />
-                  <Sprite Slot="124" Width="50" Height="12" ColorDepth="32" Resolution="LowRes" AlphaChannel="False" />
+                  <Sprite Slot="123" Width="50" Height="12" ColorDepth="32" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>assets/fr_fix_1.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="124" Width="50" Height="12" ColorDepth="32" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>assets/fr_fix_2.png</FileName>
+                    </Source>
+                  </Sprite>
                   <Sprite Slot="125" Width="50" Height="12" ColorDepth="32" Resolution="LowRes" AlphaChannel="False" />
                   <Sprite Slot="126" Width="50" Height="12" ColorDepth="32" Resolution="LowRes" AlphaChannel="False" />
                   <Sprite Slot="127" Width="50" Height="12" ColorDepth="32" Resolution="LowRes" AlphaChannel="False" />
