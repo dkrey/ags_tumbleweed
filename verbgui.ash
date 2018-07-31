@@ -1,5 +1,5 @@
 // Tumbleweed Verbs
-// Version: 1.0
+// Version: 1.1
 //
 // Author: 
 //   abstauber
@@ -39,13 +39,14 @@
 //
 // Revision History / Changelog
 // 1.0  initial release
+// 1.1  now includes the DoubleClick Module by Crimson Wizard, various bugfixes
 //        
 //
 // Licence:
 //
 // The MIT License (MIT)
 // 
-// Copyright (c) 2017 The AGS-Community
+// Copyright (c) 2017- present Dirk Kreyenberg
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -67,9 +68,6 @@
 
 
 //----------------------------------------------------------------------------
-
-#define ACT_COUNT 10  // Action Button Count (gMain)
-#define MAX_DOORS 99 // How many doors accessed by door script
 
         
 enum eGlobCond {
@@ -106,6 +104,52 @@ enum eLanguage {
   eLangNL
 };
 
+enum eVerbGuiOptions {
+  eVerbGuiTemplateLanguage,
+  eVerbGuiActionLabelColorNormal,
+  eVerbGuiActionLabelColorHighlighted,
+  eVerbGuiInvUparrowONsprite,
+  eVerbGuiInvUparrowOFFsprite,
+  eVerbGuiInvUparrowHIsprite,
+  eVerbGuiInvDownarrowONsprite,
+  eVerbGuiInvDownarrowOFFsprite,
+  eVerbGuiInvDownarrowHIsprite,
+  eVerbGuiWalkOffScreenOffset,
+  eVerbGuiApproachCharInteract,
+  eVerbGuiNPCfacingPlayer,
+  eVerbGuiObjHotTalk,
+  eVerbGuiClassicInvHandling,
+  eVerbGuiClassicGui,
+  eVerbGuiExitDoorDoubleclick,
+  eVerbGuiExitExtensionDoubleclick,
+  eVerbGuiRunOnDoubleClick,
+  eVerbGuiRunCursorDistance,
+  eVerbGuiRunSpeedupRate
+};
+
+enum eVerbGuiUnhandled {
+  eVerbGuiUnhandledUse, 
+  eVerbGuiUnhandledUseInv, 
+  eVerbGuiUnhandledLook, 
+  eVerbGuiUnhandledLookChar, 
+  eVerbGuiUnhandledPush, 
+  eVerbGuiUnhandledPushChar, 
+  eVerbGuiUnhandledPull, 
+  eVerbGuiUnhandledPullChar,  
+  eVerbGuiUnhandledCloseDoor, 
+  eVerbGuiUnhandledCloseChar, 
+  eVerbGuiUnhandledClose, 
+  eVerbGuiUnhandledOpenDoor, 
+  eVerbGuiUnhandledOpenChar, 
+  eVerbGuiUnhandledOpen, 
+  eVerbGuiUnhandledPickup, 
+  eVerbGuiUnhandledPickupChar, 
+  eVerbGuiUnhandledTalkTo, 
+  eVerbGuiUnhandledTalkToChar, 
+  eVerbGuiUnhandledGive,
+  eVerbGuiUnhandledDefault
+};
+
 
 // ============================= door script functions =========================================
 struct Doors {
@@ -124,6 +168,11 @@ import void EnterRoom(this Character*, int newRoom, int x, int y, CharacterDirec
 
 // ============================= Verb GUI functions ============================================
 struct Verbs {
+  
+  // Template Properties
+  import static attribute int VerbGuiOptions[];
+  import static attribute String VerbGuiUnhandled[];
+  
 // ============================= Helper functions ==============================================
   import static float Distance(int x1, int y1, int x2, int y2);
   import static int  Offset(int point1, int point2);
@@ -132,7 +181,6 @@ struct Verbs {
   import static void EnableGui();
   import static bool IsGuiDisabled();
   import static int  GlobalCondition(eGlobCond condition);
-  import static void SetDoubleClickSpeed(int speed);
   import static void InitGuiLanguage();  
   import static void HandleInvArrows();  
   
@@ -155,7 +203,6 @@ struct Verbs {
   import static int  GoTo(int blocking=2);
   import static void SetApproachingChar(bool enable);
   import static void WalkOffScreen();
-
 
   // ================ Cancelable, semi-blocking move-player-character functions =====================
   import static int MovePlayer(int x, int y);

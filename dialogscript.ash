@@ -9,7 +9,7 @@
 // Licence:
 //
 //   CustomDialogGui AGS script module
-//   Copyright (C) 2008 - 2015 Dirk Kreyenberg
+//   Copyright (C) 2008 - present Dirk Kreyenberg
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to 

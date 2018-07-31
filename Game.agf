@@ -34,7 +34,7 @@
       <HandleInvClicksInScript>True</HandleInvClicksInScript>
       <DisplayMultipleInventory>False</DisplayMultipleInventory>
       <ScriptAPIVersion>Highest</ScriptAPIVersion>
-      <ScriptCompatLevel>v340</ScriptCompatLevel>
+      <ScriptCompatLevel>Highest</ScriptCompatLevel>
       <EnforceObjectBasedScript>True</EnforceObjectBasedScript>
       <EnforceNewStrings>True</EnforceNewStrings>
       <EnforceNewAudio>True</EnforceNewAudio>
@@ -3154,6 +3154,11 @@ stop
               <Sprite Slot="56" Width="12" Height="20" ColorDepth="32" Resolution="LowRes" AlphaChannel="False" />
               <Sprite Slot="57" Width="12" Height="20" ColorDepth="32" Resolution="LowRes" AlphaChannel="False" />
               <Sprite Slot="58" Width="12" Height="20" ColorDepth="32" Resolution="LowRes" AlphaChannel="False" />
+              <Sprite Slot="122" Width="320" Height="55" ColorDepth="32" Resolution="LowRes" AlphaChannel="True">
+                <Source>
+                  <FileName>assets/gui/dialog_background.png</FileName>
+                </Source>
+              </Sprite>
             </Sprites>
           </SpriteFolder>
           <SpriteFolder Name="inventory">
@@ -3665,7 +3670,31 @@ stop
               <ScriptAndHeader>
                 <ScriptAndHeader_Header>
                   <Script>
-                    <FileName>dialogscript.ash</FileName>
+                    <FileName>DoubleClick.ash</FileName>
+                    <Name>Double Click</Name>
+                    <Description>Detects double mouse clicks</Description>
+                    <Author>Ivan Mogilko</Author>
+                    <Version>1.0.0</Version>
+                    <Key>884826083</Key>
+                    <IsHeader>True</IsHeader>
+                  </Script>
+                </ScriptAndHeader_Header>
+                <ScriptAndHeader_Script>
+                  <Script>
+                    <FileName>DoubleClick.asc</FileName>
+                    <Name>Double Click</Name>
+                    <Description>Detects double mouse clicks</Description>
+                    <Author>Ivan Mogilko</Author>
+                    <Version>1.0.0</Version>
+                    <Key>884826083</Key>
+                    <IsHeader>False</IsHeader>
+                  </Script>
+                </ScriptAndHeader_Script>
+              </ScriptAndHeader>
+              <ScriptAndHeader>
+                <ScriptAndHeader_Header>
+                  <Script>
+                    <FileName>DialogScript.ash</FileName>
                     <Name>Dialogscript</Name>
                     <Description>simplified fork of CDG</Description>
                     <Author>abstauber</Author>
@@ -3676,7 +3705,7 @@ stop
                 </ScriptAndHeader_Header>
                 <ScriptAndHeader_Script>
                   <Script>
-                    <FileName>dialogscript.asc</FileName>
+                    <FileName>DialogScript.asc</FileName>
                     <Name>Dialogscript</Name>
                     <Description>simplified fork of CDG</Description>
                     <Author>abstauber</Author>
@@ -3689,7 +3718,7 @@ stop
               <ScriptAndHeader>
                 <ScriptAndHeader_Header>
                   <Script>
-                    <FileName>optiongui.ash</FileName>
+                    <FileName>OptionGui.ash</FileName>
                     <Name />
                     <Description />
                     <Author />
@@ -3700,7 +3729,7 @@ stop
                 </ScriptAndHeader_Header>
                 <ScriptAndHeader_Script>
                   <Script>
-                    <FileName>optiongui.asc</FileName>
+                    <FileName>OptionGui.asc</FileName>
                     <Name>Save and Load</Name>
                     <Description>Options, Save and Load Dialog functionality</Description>
                     <Author>abstauber</Author>
@@ -3713,7 +3742,7 @@ stop
               <ScriptAndHeader>
                 <ScriptAndHeader_Header>
                   <Script>
-                    <FileName>verbgui.ash</FileName>
+                    <FileName>VerbGui.ash</FileName>
                     <Name>9-Verb MI-Style</Name>
                     <Description>9Verb GUI functions</Description>
                     <Author>Authors named in header file</Author>
@@ -3724,11 +3753,11 @@ stop
                 </ScriptAndHeader_Header>
                 <ScriptAndHeader_Script>
                   <Script>
-                    <FileName>verbgui.asc</FileName>
+                    <FileName>VerbGui.asc</FileName>
                     <Name>Tumbleweed Verbs</Name>
                     <Description>GUI functions</Description>
                     <Author>Authors named in header file</Author>
-                    <Version>1.0</Version>
+                    <Version>1.1</Version>
                     <Key>1562295785</Key>
                     <IsHeader>False</IsHeader>
                   </Script>
@@ -3737,23 +3766,23 @@ stop
               <ScriptAndHeader>
                 <ScriptAndHeader_Header>
                   <Script>
-                    <FileName>legacy_layer.ash</FileName>
+                    <FileName>VerbGuiSettings.ash</FileName>
                     <Name />
                     <Description />
                     <Author />
                     <Version />
-                    <Key>1743043529</Key>
+                    <Key>838654941</Key>
                     <IsHeader>True</IsHeader>
                   </Script>
                 </ScriptAndHeader_Header>
                 <ScriptAndHeader_Script>
                   <Script>
-                    <FileName>legacy_layer.asc</FileName>
-                    <Name>Legacy Layer</Name>
-                    <Description>Provide old template functions</Description>
-                    <Author>abstauber</Author>
-                    <Version>1.0</Version>
-                    <Key>1743043529</Key>
+                    <FileName>VerbGuiSettings.asc</FileName>
+                    <Name />
+                    <Description />
+                    <Author />
+                    <Version />
+                    <Key>838654941</Key>
                     <IsHeader>False</IsHeader>
                   </Script>
                 </ScriptAndHeader_Script>
