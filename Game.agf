@@ -3766,7 +3766,7 @@ stop
               <ScriptAndHeader>
                 <ScriptAndHeader_Header>
                   <Script>
-                    <FileName>VerbGuiSettings.ash</FileName>
+                    <FileName>TemplateSettings.ash</FileName>
                     <Name />
                     <Description />
                     <Author />
@@ -3777,7 +3777,7 @@ stop
                 </ScriptAndHeader_Header>
                 <ScriptAndHeader_Script>
                   <Script>
-                    <FileName>VerbGuiSettings.asc</FileName>
+                    <FileName>TemplateSettings.asc</FileName>
                     <Name />
                     <Description />
                     <Author />

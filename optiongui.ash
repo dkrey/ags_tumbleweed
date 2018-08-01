@@ -27,6 +27,8 @@
 #define SAVE_SLOTS 9 
 
 struct OptionGui {
+  import static attribute int slotSprite;
+  import static attribute int slotSpriteHi;
   import static void InitSaveDialog();
   import static void ShowSaveDialog();
   import static void DisableSaveButtons();

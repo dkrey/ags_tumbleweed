@@ -1,9 +1,8 @@
 // Script header for module 'dialogscript'
 //
-// simplified custom dialog gui based on v.1.6.3
+// Custom dialog GUI script for sleek scrollable dialogs
 //
-// This script is compatible with AGS 3.2 and higher
-// Therefore it doesn't work with AGS 3.1 and below.
+// This script is compatible with AGS 3.4 and higher
 //
 //
 // Licence:
@@ -30,92 +29,68 @@
 // DEALINGS IN THE SOFTWARE.
 
 
+enum eDialogGuiOptions {
+  eDialogGui_hide_gui_while_dialog, 
+  eDialogGui_gui_xpos, 
+  eDialogGui_gui_ypos, 
+  eDialogGui_gui_width, 
+  eDialogGui_gui_height, 
+  eDialogGui_yscreenborder, 
+  eDialogGui_xscreenborder, 
+  eDialogGui_text_font, 
+  eDialogGui_text_alignment, 
+  eDialogGui_text_color, 
+  eDialogGui_text_color_active, 
+  eDialogGui_text_bg, 
+  eDialogGui_text_bg_xpos, 
+  eDialogGui_text_bg_scaling, 
+  eDialogGui_text_bg_transparency, 
+  eDialogGui_text_line_space, 
+  eDialogGui_text_numbering, 
+  eDialogGui_scroll_rows, 
+  eDialogGui_bullet, 
+  eDialogGui_mousewheel, 
+  eDialogGui_reset_scrollstate, 
+  eDialogGui_dialog_options_upwards, 
+  eDialogGui_uparrow_img, 
+  eDialogGui_uparrow_hi_img, 
+  eDialogGui_uparrow_xpos, 
+  eDialogGui_uparrow_ypos, 
+  eDialogGui_downarrow_img, 
+  eDialogGui_downarrow_hi_img, 
+  eDialogGui_downarrow_xpos, 
+  eDialogGui_downarrow_ypos, 
+  eDialogGui_auto_arrow_align, 
+  eDialogGui_auto_arrow_up_offset_x, 
+  eDialogGui_auto_arrow_up_offset_y, 
+  eDialogGui_auto_arrow_down_offset_x, 
+  eDialogGui_auto_arrow_down_offset_y, 
+  eDialogGui_border_top, 
+  eDialogGui_border_bottom, 
+  eDialogGui_border_left, 
+  eDialogGui_border_right, 
+  eDialogGui_border_visible, 
+  eDialogGui_border_color, 
+  eDialogGui_bg_img, 
+  eDialogGui_bg_img_scaling, 
+  eDialogGui_bg_img_transparency, 
+  eDialogGui_bg_color, 
+  eDialogGui_autosize_height, 
+  eDialogGui_autosize_width, 
+  eDialogGui_autosize_minheight, 
+  eDialogGui_autosize_maxheight, 
+  eDialogGui_autosize_minwidth, 
+  eDialogGui_autosize_maxwidth
+};
+
+
 
 struct CustomDialogGui {
-  import function init();
-  DialogOptionsRenderingInfo *dialog_window;
-  bool hide_gui_while_dialog;
-  int gui_xpos;
-  int gui_ypos;
-  int gui_width;
-  int gui_height;
-
-  bool autosize_height;
-  bool autosize_width;
-  int yscreenborder;
-  int xscreenborder;
-  int autosize_minheight;
-  int autosize_maxheight;
-  int autosize_minwidth;
-  int autosize_maxwidth;  
-  int auto_arrow_align;
-  int auto_arrow_up_offset_x;
-  int auto_arrow_up_offset_y;
-  int auto_arrow_down_offset_x;
-  int auto_arrow_down_offset_y;  
-  
-  int bullet;
-  
-  int uparrow_img;
-  int uparrow_hi_img;
-  int uparrow_push_img;
-  int uparrow_xpos;
-  int uparrow_ypos;
-  
-  int downarrow_img;
-  int downarrow_hi_img;
-  int downarrow_push_img;
-  int downarrow_xpos;
-  int downarrow_ypos;
-
-  float scroll_btn_delay;
-  int border_top;
-  int border_bottom;
-  int border_left;
-  int border_right;
-  int border_visible;
-  int border_color;
-
-  bool mousewheel;
-  bool reset_scrollstate;
-  bool dialog_options_upwards;
-  int bg_img; 
-  int bg_img_scaling;
-  int bg_img_transparency;
-  int bg_color;
-  int scroll_rows;
-
-  int text_font;
-  int text_color;
-  int text_color_active;
-  int text_alignment;
-  int text_bg;
-  int text_bg_xpos;
-  int text_bg_scaling;
-  int text_bg_transparency;  
-  int text_line_space;
-  int text_numbering;
-
-  // internal Stuff from here on
-  int scroll_from;
-  int scroll_to;
-  
-  int max_option_height;
-  int max_option_width;
-  int active_options_count;  
-  int locked_xpos;
-  int locked_ypos;
-  int uparrow_current_img;
-  int downarrow_current_img;  
+  import static attribute int DialogGuiOptions[];
 };
 
-struct CDG_Arrow {
-  int x1;
-  int y1;
-  int x2;
-  int y2;
-};
-
-import CustomDialogGui CDG;
-
+import void prepare(static CustomDialogGui, DialogOptionsRenderingInfo *info); // $AUTOCOMPLETEIGNORE$
+import void addOption(static CustomDialogGui, int position, int optionNumber, String optionText); // $AUTOCOMPLETEIGNORE$
+import void getOptionDetails(static CustomDialogGui, DialogOptionsRenderingInfo *info); // $AUTOCOMPLETEIGNORE$
+import void getRowCount(static CustomDialogGui, int width); // $AUTOCOMPLETEIGNORE$
 

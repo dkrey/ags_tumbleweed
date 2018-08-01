@@ -36,12 +36,6 @@
 // Dependencies:
 //   AGS 3.4 or later 
 //
-//
-// Revision History / Changelog
-// 1.0  initial release
-// 1.1  now includes the DoubleClick Module by Crimson Wizard, various bugfixes
-//        
-//
 // Licence:
 //
 // The MIT License (MIT)
@@ -150,14 +144,21 @@ enum eVerbGuiUnhandled {
   eVerbGuiUnhandledDefault
 };
 
+enum eDoorStrings{
+  eDoorStringLookAt, 
+  eDoorStringLocked, 
+  eDoorStringWrongItem,
+  eDoorStringCloseFirst,
+  eDoorStringUnlock,
+  eDoorStringRelock
+};
 
 // ============================= door script functions =========================================
 struct Doors {
+  import static attribute String DoorStrings[];
   import static void   SetDoorState(int door_id, int value);
   import static int    GetDoorState(int door_id);
   import static void   InitObject (int door_id, int obj);
-  import static void   SetDoorStrings(String lookat =false, String islocked =false, String wrongitem =false, String closefirst =false, String unlock =false, String relock =false);
-  import static String GetDoorStrings(String what_type);
   import static int    AnyClick(int door_id, int act_object, int x, int y, CharacterDirection dir, int nr_room, int nr_x, int nr_y, CharacterDirection nr_dir);
   import static int    AnyClickSpecial (int door_id, int act_object, int x, int y, CharacterDirection dir, int nr_room, int nr_x, int nr_y, CharacterDirection nr_dir, AudioClip *opensound, AudioClip *closesound, int key, int closevalue);
 };
@@ -168,8 +169,6 @@ import void EnterRoom(this Character*, int newRoom, int x, int y, CharacterDirec
 
 // ============================= Verb GUI functions ============================================
 struct Verbs {
-  
-  // Template Properties
   import static attribute int VerbGuiOptions[];
   import static attribute String VerbGuiUnhandled[];
   
