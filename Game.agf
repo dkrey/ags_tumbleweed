@@ -1003,7 +1003,7 @@
                 <Name>lblOptions</Name>
               </GUILabel>
               <GUIButton>
-                <OnClick>btnOptionsDefault_OnClick</OnClick>
+                <OnClick>btnOptions_OnClick</OnClick>
                 <ClickAction>RunScript</ClickAction>
                 <NewModeNumber>0</NewModeNumber>
                 <ClipImage>False</ClipImage>
@@ -1024,7 +1024,7 @@
                 <Name>btnOptionsDefault</Name>
               </GUIButton>
               <GUIButton>
-                <OnClick>btnOptions_Click</OnClick>
+                <OnClick>btnOptions_OnClick</OnClick>
                 <ClickAction>RunScript</ClickAction>
                 <NewModeNumber>0</NewModeNumber>
                 <ClipImage>False</ClipImage>
@@ -1045,7 +1045,7 @@
                 <Name>btnOptionsSave</Name>
               </GUIButton>
               <GUIButton>
-                <OnClick>btnOptions_Click</OnClick>
+                <OnClick>btnOptions_OnClick</OnClick>
                 <ClickAction>RunScript</ClickAction>
                 <NewModeNumber>0</NewModeNumber>
                 <ClipImage>False</ClipImage>
@@ -1066,7 +1066,7 @@
                 <Name>btnOptionsLoad</Name>
               </GUIButton>
               <GUIButton>
-                <OnClick>btnOptions_Click</OnClick>
+                <OnClick>btnOptions_OnClick</OnClick>
                 <ClickAction>RunScript</ClickAction>
                 <NewModeNumber>0</NewModeNumber>
                 <ClipImage>False</ClipImage>
@@ -1087,7 +1087,7 @@
                 <Name>btnOptionsQuit</Name>
               </GUIButton>
               <GUIButton>
-                <OnClick>btnOptions_Click</OnClick>
+                <OnClick>btnOptions_OnClick</OnClick>
                 <ClickAction>RunScript</ClickAction>
                 <NewModeNumber>0</NewModeNumber>
                 <ClipImage>False</ClipImage>
@@ -1122,7 +1122,7 @@
                 <Name>lblOptionsMusic</Name>
               </GUILabel>
               <GUISlider>
-                <OnChange>sldOptionsMusic_OnChange</OnChange>
+                <OnChange>btnOptions_OnSliderChange</OnChange>
                 <HandleImage>0</HandleImage>
                 <HandleOffset>0</HandleOffset>
                 <BackgroundImage>0</BackgroundImage>
@@ -1153,7 +1153,7 @@
                 <Name>lblOptionsSound</Name>
               </GUILabel>
               <GUISlider>
-                <OnChange>sldOptionsSound_OnChange</OnChange>
+                <OnChange>btnOptions_OnSliderChange</OnChange>
                 <HandleImage>0</HandleImage>
                 <HandleOffset>0</HandleOffset>
                 <BackgroundImage>0</BackgroundImage>
@@ -1184,7 +1184,7 @@
                 <Name>lblOptionsStyle</Name>
               </GUILabel>
               <GUISlider>
-                <OnChange>sldOptionsStyle_OnChange</OnChange>
+                <OnChange>btnOptions_OnSliderChange</OnChange>
                 <HandleImage>0</HandleImage>
                 <HandleOffset>0</HandleOffset>
                 <BackgroundImage>0</BackgroundImage>
@@ -1201,7 +1201,7 @@
                 <Name>sldOptionsStyle</Name>
               </GUISlider>
               <GUIButton>
-                <OnClick>btnOptions_Click</OnClick>
+                <OnClick>btnOptions_OnClick</OnClick>
                 <ClickAction>RunScript</ClickAction>
                 <NewModeNumber>0</NewModeNumber>
                 <ClipImage>False</ClipImage>
@@ -1285,7 +1285,7 @@
                 <Name>lblSave</Name>
               </GUILabel>
               <GUIButton>
-                <OnClick>btnSaveSlot_OnClick</OnClick>
+                <OnClick>btnOptions_OnClick</OnClick>
                 <ClickAction>RunScript</ClickAction>
                 <NewModeNumber>0</NewModeNumber>
                 <ClipImage>False</ClipImage>
@@ -1306,7 +1306,7 @@
                 <Name>btnSaveSlot1</Name>
               </GUIButton>
               <GUIButton>
-                <OnClick>btnSaveSlot_OnClick</OnClick>
+                <OnClick>btnOptions_OnClick</OnClick>
                 <ClickAction>RunScript</ClickAction>
                 <NewModeNumber>0</NewModeNumber>
                 <ClipImage>False</ClipImage>
@@ -1327,7 +1327,7 @@
                 <Name>btnSaveSlot2</Name>
               </GUIButton>
               <GUIButton>
-                <OnClick>btnSaveSlot_OnClick</OnClick>
+                <OnClick>btnOptions_OnClick</OnClick>
                 <ClickAction>RunScript</ClickAction>
                 <NewModeNumber>0</NewModeNumber>
                 <ClipImage>False</ClipImage>
@@ -1348,7 +1348,7 @@
                 <Name>btnSaveSlot3</Name>
               </GUIButton>
               <GUIButton>
-                <OnClick>btnSaveSlot_OnClick</OnClick>
+                <OnClick>btnOptions_OnClick</OnClick>
                 <ClickAction>RunScript</ClickAction>
                 <NewModeNumber>0</NewModeNumber>
                 <ClipImage>False</ClipImage>
@@ -1369,7 +1369,7 @@
                 <Name>btnSaveSlot4</Name>
               </GUIButton>
               <GUIButton>
-                <OnClick>btnSaveSlot_OnClick</OnClick>
+                <OnClick>btnOptions_OnClick</OnClick>
                 <ClickAction>RunScript</ClickAction>
                 <NewModeNumber>0</NewModeNumber>
                 <ClipImage>False</ClipImage>
@@ -1390,7 +1390,7 @@
                 <Name>btnSaveSlot5</Name>
               </GUIButton>
               <GUIButton>
-                <OnClick>btnSaveSlot_OnClick</OnClick>
+                <OnClick>btnOptions_OnClick</OnClick>
                 <ClickAction>RunScript</ClickAction>
                 <NewModeNumber>0</NewModeNumber>
                 <ClipImage>False</ClipImage>
@@ -1411,7 +1411,7 @@
                 <Name>btnSaveSlot6</Name>
               </GUIButton>
               <GUIButton>
-                <OnClick>btnSaveSlot_OnClick</OnClick>
+                <OnClick>btnOptions_OnClick</OnClick>
                 <ClickAction>RunScript</ClickAction>
                 <NewModeNumber>0</NewModeNumber>
                 <ClipImage>False</ClipImage>
@@ -1432,7 +1432,7 @@
                 <Name>btnSaveSlot7</Name>
               </GUIButton>
               <GUIButton>
-                <OnClick>btnSaveSlot_OnClick</OnClick>
+                <OnClick>btnOptions_OnClick</OnClick>
                 <ClickAction>RunScript</ClickAction>
                 <NewModeNumber>0</NewModeNumber>
                 <ClipImage>False</ClipImage>
@@ -1453,7 +1453,7 @@
                 <Name>btnSaveSlot8</Name>
               </GUIButton>
               <GUIButton>
-                <OnClick>btnSaveSlot_OnClick</OnClick>
+                <OnClick>btnOptions_OnClick</OnClick>
                 <ClickAction>RunScript</ClickAction>
                 <NewModeNumber>0</NewModeNumber>
                 <ClipImage>False</ClipImage>
@@ -1474,7 +1474,7 @@
                 <Name>btnSaveSlot9</Name>
               </GUIButton>
               <GUIButton>
-                <OnClick>btnSaveCancel_OnClick</OnClick>
+                <OnClick>btnOptions_OnClick</OnClick>
                 <ClickAction>RunScript</ClickAction>
                 <NewModeNumber>0</NewModeNumber>
                 <ClipImage>False</ClipImage>
@@ -1495,7 +1495,7 @@
                 <Name>btnSaveCancel</Name>
               </GUIButton>
               <GUIButton>
-                <OnClick>btnSaveCancel_OnClick</OnClick>
+                <OnClick>btnOptions_OnClick</OnClick>
                 <ClickAction>RunScript</ClickAction>
                 <NewModeNumber>0</NewModeNumber>
                 <ClipImage>False</ClipImage>
@@ -1537,7 +1537,7 @@
             </NormalGUI>
             <Controls>
               <GUIButton>
-                <OnClick>btnSaveOk_OnClick</OnClick>
+                <OnClick>btnOptions_OnClick</OnClick>
                 <ClickAction>RunScript</ClickAction>
                 <NewModeNumber>0</NewModeNumber>
                 <ClipImage>False</ClipImage>
@@ -1558,7 +1558,7 @@
                 <Name>btnSaveOk</Name>
               </GUIButton>
               <GUIButton>
-                <OnClick>btnSaveNo_OnClick</OnClick>
+                <OnClick>btnOptions_OnClick</OnClick>
                 <ClickAction>RunScript</ClickAction>
                 <NewModeNumber>0</NewModeNumber>
                 <ClipImage>False</ClipImage>
@@ -1614,7 +1614,7 @@
                 <Name>lblLoad</Name>
               </GUILabel>
               <GUIButton>
-                <OnClick>btnLoadSlot_OnClick</OnClick>
+                <OnClick>btnOptions_OnClick</OnClick>
                 <ClickAction>RunScript</ClickAction>
                 <NewModeNumber>0</NewModeNumber>
                 <ClipImage>False</ClipImage>
@@ -1635,7 +1635,7 @@
                 <Name>btnLoadSlot1</Name>
               </GUIButton>
               <GUIButton>
-                <OnClick>btnLoadSlot_OnClick</OnClick>
+                <OnClick>btnOptions_OnClick</OnClick>
                 <ClickAction>RunScript</ClickAction>
                 <NewModeNumber>0</NewModeNumber>
                 <ClipImage>False</ClipImage>
@@ -1656,7 +1656,7 @@
                 <Name>btnLoadSlot2</Name>
               </GUIButton>
               <GUIButton>
-                <OnClick>btnLoadSlot_OnClick</OnClick>
+                <OnClick>btnOptions_OnClick</OnClick>
                 <ClickAction>RunScript</ClickAction>
                 <NewModeNumber>0</NewModeNumber>
                 <ClipImage>False</ClipImage>
@@ -1677,7 +1677,7 @@
                 <Name>btnLoadSlot3</Name>
               </GUIButton>
               <GUIButton>
-                <OnClick>btnLoadSlot_OnClick</OnClick>
+                <OnClick>btnOptions_OnClick</OnClick>
                 <ClickAction>RunScript</ClickAction>
                 <NewModeNumber>0</NewModeNumber>
                 <ClipImage>False</ClipImage>
@@ -1698,7 +1698,7 @@
                 <Name>btnLoadSlot4</Name>
               </GUIButton>
               <GUIButton>
-                <OnClick>btnLoadSlot_OnClick</OnClick>
+                <OnClick>btnOptions_OnClick</OnClick>
                 <ClickAction>RunScript</ClickAction>
                 <NewModeNumber>0</NewModeNumber>
                 <ClipImage>False</ClipImage>
@@ -1719,7 +1719,7 @@
                 <Name>btnLoadSlot5</Name>
               </GUIButton>
               <GUIButton>
-                <OnClick>btnLoadSlot_OnClick</OnClick>
+                <OnClick>btnOptions_OnClick</OnClick>
                 <ClickAction>RunScript</ClickAction>
                 <NewModeNumber>0</NewModeNumber>
                 <ClipImage>False</ClipImage>
@@ -1740,7 +1740,7 @@
                 <Name>btnLoadSlot6</Name>
               </GUIButton>
               <GUIButton>
-                <OnClick>btnLoadSlot_OnClick</OnClick>
+                <OnClick>btnOptions_OnClick</OnClick>
                 <ClickAction>RunScript</ClickAction>
                 <NewModeNumber>0</NewModeNumber>
                 <ClipImage>False</ClipImage>
@@ -1761,7 +1761,7 @@
                 <Name>btnLoadSlot7</Name>
               </GUIButton>
               <GUIButton>
-                <OnClick>btnLoadSlot_OnClick</OnClick>
+                <OnClick>btnOptions_OnClick</OnClick>
                 <ClickAction>RunScript</ClickAction>
                 <NewModeNumber>0</NewModeNumber>
                 <ClipImage>False</ClipImage>
@@ -1782,7 +1782,7 @@
                 <Name>btnLoadSlot8</Name>
               </GUIButton>
               <GUIButton>
-                <OnClick>btnLoadSlot_OnClick</OnClick>
+                <OnClick>btnOptions_OnClick</OnClick>
                 <ClickAction>RunScript</ClickAction>
                 <NewModeNumber>0</NewModeNumber>
                 <ClipImage>False</ClipImage>
@@ -1803,7 +1803,7 @@
                 <Name>btnLoadSlot9</Name>
               </GUIButton>
               <GUIButton>
-                <OnClick>btnLoadCancel_OnClick</OnClick>
+                <OnClick>btnOptions_OnClick</OnClick>
                 <ClickAction>RunScript</ClickAction>
                 <NewModeNumber>0</NewModeNumber>
                 <ClipImage>False</ClipImage>
@@ -1824,7 +1824,7 @@
                 <Name>btnLoadCancel</Name>
               </GUIButton>
               <GUIButton>
-                <OnClick>btnLoadCancel_OnClick</OnClick>
+                <OnClick>btnOptions_OnClick</OnClick>
                 <ClickAction>RunScript</ClickAction>
                 <NewModeNumber>0</NewModeNumber>
                 <ClipImage>False</ClipImage>
@@ -1894,7 +1894,7 @@
                 <Name>lblQuitMessage</Name>
               </GUILabel>
               <GUIButton>
-                <OnClick>btnQuitYes_OnClick</OnClick>
+                <OnClick>btnOptions_OnClick</OnClick>
                 <ClickAction>RunScript</ClickAction>
                 <NewModeNumber>0</NewModeNumber>
                 <ClipImage>False</ClipImage>
@@ -1915,7 +1915,7 @@
                 <Name>btnQuitYes</Name>
               </GUIButton>
               <GUIButton>
-                <OnClick>btnQuitNo_OnClick</OnClick>
+                <OnClick>btnOptions_OnClick</OnClick>
                 <ClickAction>RunScript</ClickAction>
                 <NewModeNumber>0</NewModeNumber>
                 <ClipImage>False</ClipImage>
@@ -3718,30 +3718,6 @@ stop
               <ScriptAndHeader>
                 <ScriptAndHeader_Header>
                   <Script>
-                    <FileName>OptionGui.ash</FileName>
-                    <Name />
-                    <Description />
-                    <Author />
-                    <Version />
-                    <Key>1814943410</Key>
-                    <IsHeader>True</IsHeader>
-                  </Script>
-                </ScriptAndHeader_Header>
-                <ScriptAndHeader_Script>
-                  <Script>
-                    <FileName>OptionGui.asc</FileName>
-                    <Name>Save and Load</Name>
-                    <Description>Options, Save and Load Dialog functionality</Description>
-                    <Author>abstauber</Author>
-                    <Version>1.0</Version>
-                    <Key>1814943410</Key>
-                    <IsHeader>False</IsHeader>
-                  </Script>
-                </ScriptAndHeader_Script>
-              </ScriptAndHeader>
-              <ScriptAndHeader>
-                <ScriptAndHeader_Header>
-                  <Script>
                     <FileName>VerbGui.ash</FileName>
                     <Name>9-Verb MI-Style</Name>
                     <Description>9Verb GUI functions</Description>
@@ -3759,6 +3735,30 @@ stop
                     <Author>Authors named in header file</Author>
                     <Version>1.1</Version>
                     <Key>1562295785</Key>
+                    <IsHeader>False</IsHeader>
+                  </Script>
+                </ScriptAndHeader_Script>
+              </ScriptAndHeader>
+              <ScriptAndHeader>
+                <ScriptAndHeader_Header>
+                  <Script>
+                    <FileName>OptionGui.ash</FileName>
+                    <Name />
+                    <Description />
+                    <Author />
+                    <Version />
+                    <Key>1814943410</Key>
+                    <IsHeader>True</IsHeader>
+                  </Script>
+                </ScriptAndHeader_Header>
+                <ScriptAndHeader_Script>
+                  <Script>
+                    <FileName>OptionGui.asc</FileName>
+                    <Name>Save and Load</Name>
+                    <Description>Options, Save and Load Dialog functionality</Description>
+                    <Author>abstauber</Author>
+                    <Version>1.0</Version>
+                    <Key>1814943410</Key>
                     <IsHeader>False</IsHeader>
                   </Script>
                 </ScriptAndHeader_Script>

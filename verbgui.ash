@@ -63,7 +63,9 @@
 
 //----------------------------------------------------------------------------
 
-        
+#define __VERB_GUI_MODULE__ //Tell the other modules that this module is available
+
+
 enum eGlobCond {
   eGlob_MouseInvWalk,
   eGlob_MouseInvPickup, 
