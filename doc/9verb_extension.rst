@@ -10,8 +10,8 @@ Extensions
 :ref:`OpenCloseExtension <OpenCloseExtension>`
 :ref:`VariableExtensions <VariableExtensions>`
 
-Extensions are used to define the default action for the right-click. You can add extensions to characters, hotspots, objects and inventory items. 
-To add an extension, e.g. chose an object in the room editor and take a look at the description (not the name). 
+Extensions are used to define the default action for the right-click. You can add extensions to characters, hotspots, objects and inventory items.
+To add an extension, e.g. chose an object in the room editor and take a look at the description (not the name).
 In the sample room, we have an object, called Cup. In addition to the name we have an angle bracket and the letter p:
 
 ::
@@ -35,13 +35,13 @@ The bracket acts as a seperator for the extension, the letter tells the script, 
 
 If you like to customize or add these extensions, take a look at the function CheckDefaultAction.
 
-You don't have to add an extension for every object and hotspot. The template also adds some default actions on it's own. 
+You don't have to add an extension for every object and hotspot. The template also adds some default actions on it's own.
 The default action for Characters is "talk to", for Hotspots and Objects, it's look at.
 Inventory items are handled a little differently, the right-click always causes "look at", no matter what. If you left-click an
 item, it's usually "use with". But if you have added the extension "u", the action will be simply "use".
-Clicking the verb button "use" and the item afterwards would cause the same action. But it could seem a little bit unpredictable, 
+Clicking the verb button "use" and the item afterwards would cause the same action. But it could seem a little bit unpredictable,
 whether an item can used by a verb button or not. With this shortcut you can make things a little bit easier.
-You can see this behaviour in the sample room, when opening the letter. Otherwise you would have needed something else to interact with it. 
+You can see this behaviour in the sample room, when opening the letter. Otherwise you would have needed something else to interact with it.
 But with the use-extension, it is getting opened by a single left-click. The exit extension is covered in the following chapter.
 
 *See also:*
@@ -52,7 +52,7 @@ But with the use-extension, it is getting opened by a single left-click. The exi
 
 .. index::
 	RemoveExtension
-	
+
 RemoveExtension
 ---------------
 
@@ -67,12 +67,12 @@ Used to remove the extension from a location (Hotspots, Objects etc.), so it doe
 
 .. index::
 	AddExtension
-	
+
 AddExtension
 ------------
 
 ::
-	
+
 	void Verbs.AddExtension(char extension);
 
 Used to add a default extension in case the location doesn't have one.
@@ -82,7 +82,7 @@ Used to add a default extension in case the location doesn't have one.
 
 .. index::
 	Extension
-	
+
 Extension
 ---------
 
@@ -97,7 +97,7 @@ Returns the first extention of a location.
 
 .. index::
 	ExtensionEx
-	
+
 ExtensionEx
 -----------
 
@@ -113,7 +113,7 @@ Returns the n-th extension of the given string. This is currently used for exit 
 
 .. index::
 	OpenCloseExtension
-	
+
 OpenCloseExtension
 ------------------
 
@@ -128,7 +128,7 @@ Used in combination with the door scripts. This function returns a close extensi
 
 .. index::
 	VariableExtensions
-	
+
 VariableExtensions
 ------------------
 
@@ -136,6 +136,6 @@ VariableExtensions
 
 	void Verbs.VariableExtensions();
 
-This function is called, if you have have set "v" as an extension for a certain location. Currently it is used for the OpenClose extension, 
+This function is called, if you have have set "v" as an extension for a certain location. Currently it is used for the OpenClose extension,
 but of course you can add your own variable extensions here, for example "turn on / turn off".
 

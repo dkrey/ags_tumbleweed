@@ -5,12 +5,10 @@ Door functions
 :ref:`SetDoorState <SetDoorState>`
 :ref:`GetDoorState <GetDoorState>`
 :ref:`InitObject <InitObject>`
-:ref:`SetDoorStrings <SetDoorStrings>`
-:ref:`GetDoorStrings <GetDoorStrings>`
 :ref:`AnyClick <AnyClick>`
 :ref:`AnyClickSpecial <AnyClickSpecial>`
 
-This template implements a clever door scripting system, which is a real timesaver if you use a lot of doors. 
+This template implements a clever door scripting system, which is a real timesaver if you use a lot of doors.
 It uses a hotspot for the closed door and a non-clickable object, to show the opened door.
 If you enter a room the first time, you have to set up its containing doors:
 
@@ -33,10 +31,10 @@ Now let's take a look at your hotspot's function:
 		if (Doors.AnyClick(20, oDoor.ID, 61, 104, eDir_Left, 1, 115, 135, eDir_Down)==0) Verbs.Unhandled();
 	}
 
-This function is explained in detail later in this document. But for starters, this is all you have to do in the room script. 
+This function is explained in detail later in this document. But for starters, this is all you have to do in the room script.
 And looks much harder than it is, just take a look at the sample room, supplied with this template.
 
-If you want to have the script to show the correct default actions, you also need to change a line in the gui-script: 
+If you want to have the script to show the correct default actions, you also need to change a line in the gui-script:
 so look for a function, called VariableExtensions.
 In Verbs.VariableExtensions, look at this line:
 
@@ -45,15 +43,17 @@ In Verbs.VariableExtensions, look at this line:
 	if (r==1 && h == 1)
 	Verbs.OpenCloseExtension (20);
 
-This tells the script, that Room 1 contains a hotspot with the id 1. This is connected to a door a door with the id 20. 
+This tells the script, that Room 1 contains a hotspot with the id 1. This is connected to a door a door with the id 20.
 So now, the right-click should suggest open/close, depending on the door's state.
+
+To define the messages, the player character says, when approaching a door, you can access the array holding those messages anytime. Initially they are setup in the TemplateSettings.asc module.
 
 
 .. _SetDoorState:
 
 .. index::
 	SetDoorState
-	
+
 SetDoorState
 ------------
 
@@ -77,7 +77,7 @@ A door can have 3 different states:
 
 .. index::
 	GetDoorState
-	
+
 GetDoorState
 ------------
 
@@ -100,7 +100,7 @@ Returns the current state of a door.
 
 .. index::
 	InitObject
-	
+
 InitObject
 -----------
 
@@ -108,81 +108,23 @@ InitObject
 
 	void Doors.InitObject(int door_id, int act_object);
 
-Used to set up the corresponding object, used by the door with the given id. If the state of the door is closed, the object will be invisible. 
+Used to set up the corresponding object, used by the door with the given id. If the state of the door is closed, the object will be invisible.
 Otherwise, the object will be shown. The object stays unclickable all the time.
 
 *See also:*
 :ref:`SetDoorState <SetDoorState>`
 
 
-.. _SetDoorStrings:
-
-.. index::
-	SetDoorStrings
-	
-SetDoorStrings
-----------------
-
-::
-
-	void Doors.SetDoorStrings(String lookat, String islocked, String wrongitem, String closefirst, String unlock, String relock);
-
-Use this function to define the messages, the player character says, when approaching a door.
-
-*lookat*
-: shown, if the player looks at the door
-*islocked*
-: shown, if the player tries to open a locked door
-*wrongitem*
-: shown, it the player tries to unlock the door with a wrong item
-*closefirst*
-: shown, if the player wants to lock a opened door
-*relock*
-: shown, if the player locks a previously unlocked door
-
-*See also:* 
-:ref:`GetDoorStrings <GetDoorStrings>`
-
-
-
-.. _GetDoorStrings:
-
-.. index::
-	GetDoorStrings
-	
-GetDoorStrings
-----------------
-
-::
-
-	String GetDoorStrings(String what_type);
-
-Returns the message, which has been set up by set_door_strings. Accepted parameters are:
-
-* lookat, islocked, wrongitem, closefirst, relock
-
-Remember, that these are strings, so don't forget the quotation marks.
-
-Usage: 
-
-::
-
-	if(!String.IsNullOrEmpty(Doors.GetDoorStrings("islocked"))) player.Say(Doors.GetDoorStrings("islocked"));
-
-*See also:*
-:ref:`SetDoorStrings <SetDoorStrings>`
-
-
 .. _AnyClick:
 
 .. index::
 	AnyClick
-	
+
 AnyClick
 -----------------
 
 ::
-	
+
 	int Doors.AnyClick(int door_id, int act_object, int x, int y, eDirection dir, int nr_room, int nr_x, int nr_y, eDirection nr_dir);
 
 This function is used in the room script in combination with the door hotspot.
@@ -196,8 +138,8 @@ Parameters:
 * nr_x,nr_y: the x,y coordinates of inside of the new room
 * nr_dir: after the room change, the player faces this direction
 
-This is the main function of the door scripts. With this you connect the hotspot with the door and the player's action. 
-If you have defined default door sounds, these are also being called in this function. Also you can't unlock a door with this function. 
+This is the main function of the door scripts. With this you connect the hotspot with the door and the player's action.
+If you have defined default door sounds, these are also being called in this function. Also you can't unlock a door with this function.
 You need Doors.AnyClickSpecial for that.
 
 *See also:*
@@ -208,7 +150,7 @@ You need Doors.AnyClickSpecial for that.
 
 .. index::
 	AnyClickSpecial
-	
+
 AnyClickSpecial
 -------------------------
 

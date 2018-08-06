@@ -12,12 +12,12 @@ Math and Helper Functions
 :ref:`GlobalCondition <GlobalCondition>`
 :ref:`InitGuiLanguage <InitGuiLanguage>`
 :ref:`HandleInvArrows <HandleInvArrows>`
-:ref:`SetDoubleClickSpeed <SetDoubleClickSpeed>` 
+:ref:`SetDoubleClickSpeed <SetDoubleClickSpeed>`
 
 .. _Distance:
 .. index::
 	Distance
-	
+
 Distance
 --------
 
@@ -32,7 +32,7 @@ Returns the distance between two coordinates
 
 .. index::
 	Offset
-	
+
 Offset
 ------
 
@@ -47,7 +47,7 @@ Returns the offset between to two given values.
 
 .. index::
 	GetButtonAction
-	
+
 GetButtonAction
 ---------------
 
@@ -66,7 +66,7 @@ Returns the connected action of a verb button. The actions for the verb buttons 
 
 .. index::
 	DisableGui
-	
+
 DisableGui
 -----------
 
@@ -85,7 +85,7 @@ This functions disables the GUI and hides it.
 
 .. index::
 	EnableGui
-	
+
 EnableGui
 -----------
 
@@ -104,7 +104,7 @@ This function enables the GUI again.
 
 .. index::
 	IsGuiDisabled
-	
+
 IsGuiDisabled
 ---------------
 
@@ -139,7 +139,7 @@ Returns 1, if the condition is true and 0 otherwise.
 
 .. index::
 	InitGuiLanguage
-	
+
 InitGuiLanguage
 ---------------
 
@@ -154,7 +154,7 @@ This is a helper function to set the correct sprites for the verb GUI.
 
 .. index::
 	SetDoubleClickSpeed
-	
+
 SetDoubleClickSpeed
 -------------------
 
@@ -169,7 +169,7 @@ Defines the double click speed
 
 .. index::
 	HandleInvArrows
-	
+
 HandleInvArrows
 ---------------
 
@@ -183,16 +183,16 @@ Takes care of showing or hiding the inventory scroll sprites.
 Unhandled Events
 ================
 
-In order to give a the player a feedback for actions the author hasn't thought of, unhandled events come into play. 
-With a single function, you can achieve something like "That doesn't work" or "I can't pull that", 
-which makes a game much more authentic and alive.
+In order to give a the player a feedback for actions the author hasn't thought of, unhandled events come into play.
+With a single function, you can achieve something like "That doesn't work" or "I can't pull that",
+which makes a game much more authentic and alive. The messages itself are defined outside of this function, initially in the TemplateSettings.asc
 
 
 .. _Unhandled:
 
 .. index::
 	Unhandled
-	
+
 Unhandled
 ---------
 

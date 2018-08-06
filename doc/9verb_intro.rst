@@ -4,8 +4,11 @@ Introduction
 ============
 
 *Tumbleweed Verbs*
-is a template that allows you to recreate those classic SCUMM games, 
+is a template that allows you to recreate those classic SCUMM games,
 as well as the modern iteration Thimbleweed Park(tm) by Terrible Toybox, Inc.
+
+Setting up the template with all your custom graphics and colors has been simplified a lot. All settings are grouped in the submodule TemplateSettings.asc.
+There is no need anymore for digging around in the single modules. The messages for unhandled events are defined in the TemplateSettings modules as well.
 
 If you like to create a game with this template, you have to re-think some concepts you use when creating a game with AGS.
 
@@ -41,27 +44,27 @@ distinguish between the different interactions. So a typical any_click function 
 		else Verbs.Unhandled();
 	}
 
-	
-The function "AnyClickWalkLookPick" is explained in the scripting reference. 
+
+The function "AnyClickWalkLookPick" is explained in the scripting reference.
 :ref:`AnyClickWalkLookPick <AnyClickWalkLookPick>`
 
-So you see, everything is inside a single function, instead 4 seperate functions. Also instead of checking the cursormodes, the function Verbs.UsedAction is called to 
+So you see, everything is inside a single function, instead 4 seperate functions. Also instead of checking the cursormodes, the function Verbs.UsedAction is called to
 determine the event/action. The current defined actions are:
 
 ::
 
 	eGA_LookAt, eGA_TalkTo, eGA_GiveTo, eGA_PickUp, eGA_Use, eGA_Open, eGA_Close, eGA_Push, eGA_Pull,eGA_UseInv, eGA_Default and eMG_WalkTo
 
-For inventory items, it's a little bit different, because there is no any_click event in the room editor. So you first start with "other click on inventory item", 
+For inventory items, it's a little bit different, because there is no any_click event in the room editor. So you first start with "other click on inventory item",
 which creates the function iCup_OtherClick (in case you have an item, called iCup).
-Now copy this function name and paste it at other events, like Interact, look, talk and so on. In the end, you only have one function name in all five events. 
+Now copy this function name and paste it at other events, like Interact, look, talk and so on. In the end, you only have one function name in all five events.
 You can also take a look at the sample items.
 
 The second main aspect of the GUI are the extensions. You add an extension to a location (Hotspots, Objects etc.) by
 editing its description.
 
-For example, let's take an object. In the sample room, the object is called oCup and the description is simply "Cup". When move the cursor over this cup 
-and no extension is defined, the default action will be "look at". Also the corresponding verb button in the gui starts to highlight. 
+For example, let's take an object. In the sample room, the object is called oCup and the description is simply "Cup". When move the cursor over this cup
+and no extension is defined, the default action will be "look at". Also the corresponding verb button in the gui starts to highlight.
 Now we can change this behaviour with adding an angeled bracket, followed by one of the following letters:
 
 * n: nothing / default
@@ -77,12 +80,12 @@ Now we can change this behaviour with adding an angeled bracket, followed by one
 * v: variable extension
 * e: exit
 
-Let's give oCup the description "Cup>p". Now the right-click action has changed. If you now move the mouse on the cup, the verb button "Pick Up" is highlighted. 
+Let's give oCup the description "Cup>p". Now the right-click action has changed. If you now move the mouse on the cup, the verb button "Pick Up" is highlighted.
 If you right-click the object, the any_click function from above is called. It checks for the used action and will perform the chosen action.
 :ref:`Extensions <Extensions>` are also explained in the function reference.
 
 
-The last thing you should know about, is the global variable "ItemGiven". If you like to give an item to a character, use this variable to check, 
+The last thing you should know about, is the global variable "ItemGiven". If you like to give an item to a character, use this variable to check,
 which item has been given. For example:
 
 ::
@@ -112,27 +115,27 @@ Using Inventory Items
 There are currently three ways of using an inventory item, you can choose from.
 
 #.  "Use" only
-	For this, you need to add the use-extention ">u" to the description of the item and an event function for "Interact inventory item". 
-	If you have followed the instructions in this manual you probably already have it there. This option might come handy for a watch. 
+	For this, you need to add the use-extention ">u" to the description of the item and an event function for "Interact inventory item".
+	If you have followed the instructions in this manual you probably already have it there. This option might come handy for a watch.
 	Clicking on it always gives you the current time. You can not give it away or use it with different items.
-	
+
 #.  "Use" and "Use with"
-	Here you need to remove the use-extension from the description, but still keep the event function. 
+	Here you need to remove the use-extension from the description, but still keep the event function.
 	This allows the player to directly use the item by clicking on the "use"-verb first. Directly clicking the items results in "use-with". Sticking
-	to the watch-example: using the watch with the verb-button sets an alarm. Clicking directly on it in the inventory results in "use with", 
-	so you can use the watch with a shelf to hide it there. But please note that it might be hard for the player to understand, 
+	to the watch-example: using the watch with the verb-button sets an alarm. Clicking directly on it in the inventory results in "use with",
+	so you can use the watch with a shelf to hide it there. But please note that it might be hard for the player to understand,
 	that using the verb button and using the inventory directly are two different things.
 
 #.  "Use with" only
-	For the last option, you need to remove the use-extension and remove the event function. 
-	Yep, that's right: on the right side of "Interact inventory item" is no function at all. 
+	For the last option, you need to remove the use-extension and remove the event function.
+	Yep, that's right: on the right side of "Interact inventory item" is no function at all.
 	If you then use the item, whether it's via the verb-button or a direct click, the action always stays "use with".
 
 
 Exit Extensions
 ===============
 
-You can add an exit extension to hotspots and objects. Clicking on such a hotspot will make the player walk to it and change the room afterwards. 
+You can add an exit extension to hotspots and objects. Clicking on such a hotspot will make the player walk to it and change the room afterwards.
 There are several advantages compared to the usual methods like 'screen edges' or stand-on hotspot functions:
 
 * works with objects and vertical hotspots (like cave entrances)
@@ -141,7 +144,7 @@ There are several advantages compared to the usual methods like 'screen edges' o
 
 
 This is how it works:
-First of all create your hotspot and let it have the '>e' extension. Now switch over to the events (that little flash) and add the Usermode_1 hotspot event. 
+First of all create your hotspot and let it have the '>e' extension. Now switch over to the events (that little flash) and add the Usermode_1 hotspot event.
 Eventually you'll end in the room script with a function called 'hExit_Mode8'.
 In that function, all you have to do is to script the room change. e.g.
 
@@ -179,13 +182,13 @@ Language & Translation
 
 Currently the GUI supports German, French, Spanish, Portuguese and Dutch. If you like to help translating this template, please drop me a PM at the AGS Forums.
 
-If you like to create your game in a different language than english, you need to set it up. At guiscript.asc you'll find the line:
+If you like to create your game in a different language than english, you need to set it up. In the TemplateSettings.asc module you'll find the line:
 
 ::
 
 	int lang = eLangEN;
 
-At the time of writing, valid values are: eLangEN, eLangES, eLangFR, eLangDE and eLandNL. Setting this variable to one of these values will translate all your GUIs, 
+At the time of writing, valid values are: eLangEN, eLangES, eLangFR, eLangDE and eLandNL. Setting this variable to one of these values will translate all your GUIs,
 including all provided dialogs. The unhandled events will stay unchanged however. Those are still needed to be changed directly.
 To switch the language in a .trs translation file, tell your translators to look out for the line.
 
