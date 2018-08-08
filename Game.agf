@@ -2515,7 +2515,7 @@ stop
       <Font>
         <ID>0</ID>
         <PointSize>9</PointSize>
-        <Name>Text</Name>
+        <Name>TumbleText</Name>
         <OutlineFont>0</OutlineFont>
         <OutlineStyle>None</OutlineStyle>
         <SourceFilename>assets/xpaider2.ttf</SourceFilename>
@@ -2525,7 +2525,7 @@ stop
       <Font>
         <ID>1</ID>
         <PointSize>10</PointSize>
-        <Name>Speech</Name>
+        <Name>TumbleSpeech</Name>
         <OutlineFont>2</OutlineFont>
         <OutlineStyle>UseOutlineFont</OutlineStyle>
         <SourceFilename>assets/adventure2.ttf</SourceFilename>
@@ -2535,7 +2535,7 @@ stop
       <Font>
         <ID>2</ID>
         <PointSize>10</PointSize>
-        <Name>OutlineSpeech</Name>
+        <Name>TumbleOutlineSpeech</Name>
         <OutlineFont>0</OutlineFont>
         <OutlineStyle>None</OutlineStyle>
         <SourceFilename>assets/arcade.ttf</SourceFilename>
@@ -2555,7 +2555,7 @@ stop
       <Font>
         <ID>4</ID>
         <PointSize>9</PointSize>
-        <Name>TextOut</Name>
+        <Name>TumbleTextOut</Name>
         <OutlineFont>0</OutlineFont>
         <OutlineStyle>Automatic</OutlineStyle>
         <SourceFilename>assets/xpaider2.ttf</SourceFilename>
