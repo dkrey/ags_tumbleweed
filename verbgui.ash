@@ -177,8 +177,6 @@ struct Verbs {
   import static void BindGuis(GUI* _gAction, GUI* _gMain, GUI* _gPause, GUI* _gQuit);
   import static void SetFonts(FontType fontText, FontType fontTextOut, FontType fontSpeech, FontType fontOutlineSpeech);
 // ============================= Helper functions ==============================================
-  import static float Distance(int x1, int y1, int x2, int y2);
-  import static int  Offset(int point1, int point2);
   import static int  GetButtonAction(int action);
   import static void DisableGui();
   import static void EnableGui();
@@ -198,12 +196,8 @@ struct Verbs {
   import static void UpdateActionBar();
   import static void AdjustActionBarPosition();
   import static void ToogleGuiStyle(int enable_new);
-
-//START Monsieur Ouxx modifications
-  //(new functions)
   import static Action GetUsedAction();
   import static InventoryItem* GetItemGiven();
-//END  Monsieur Ouxx modifications
 
   // ============================= Player/character functions =======================================
   import static void FreezePlayer();
@@ -243,4 +237,12 @@ struct Verbs {
   
 };
 
+
+// ============================= Geometry functions (utility) ============================================
+struct Geometry {
+  import static float Distance(int x1, int y1, int x2, int y2);
+  import static int  Offset(int point1, int point2);
+};
+
+  
 

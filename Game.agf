@@ -3694,7 +3694,7 @@ stop
               <ScriptAndHeader>
                 <ScriptAndHeader_Header>
                   <Script>
-                    <FileName>DialogScript.ash</FileName>
+                    <FileName>CustomDialogGui.ash</FileName>
                     <Name>Dialogscript</Name>
                     <Description>simplified fork of CDG</Description>
                     <Author>abstauber</Author>
@@ -3705,7 +3705,7 @@ stop
                 </ScriptAndHeader_Header>
                 <ScriptAndHeader_Script>
                   <Script>
-                    <FileName>DialogScript.asc</FileName>
+                    <FileName>CustomDialogGui.asc</FileName>
                     <Name>Dialogscript</Name>
                     <Description>simplified fork of CDG</Description>
                     <Author>abstauber</Author>
