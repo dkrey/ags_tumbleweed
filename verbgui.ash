@@ -178,9 +178,12 @@ struct Verbs {
   import static void SetFonts(FontType fontText, FontType fontTextOut, FontType fontSpeech, FontType fontOutlineSpeech);
 // ============================= Helper functions ==============================================
   import static int  GetButtonAction(int action);
-  import static void DisableGui();
-  import static void EnableGui();
+  import static void DisableGui(); //Disables but does not hide
+  import static void EnableGui(); //Enables but does not show
   import static bool IsGuiDisabled();
+  import static void ShowGui(); //Shows and enables
+  import static void HideGui(); //Hides and disables
+  import static bool IsGuiVisible();
   import static int  GlobalCondition(eGlobCond condition);
   import static void InitGuiLanguage();  
   import static void HandleInvArrows();  

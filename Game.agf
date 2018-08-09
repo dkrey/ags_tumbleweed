@@ -2545,7 +2545,7 @@ stop
       <Font>
         <ID>3</ID>
         <PointSize>9</PointSize>
-        <Name>Tiny</Name>
+        <Name>TumbleTiny</Name>
         <OutlineFont>0</OutlineFont>
         <OutlineStyle>Automatic</OutlineStyle>
         <SourceFilename>assets/xpaider2.ttf</SourceFilename>
