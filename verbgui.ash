@@ -176,6 +176,8 @@ struct Verbs {
   import static attribute String VerbGuiUnhandled[];
   import static void BindGuis(GUI* _gAction, GUI* _gMain, GUI* _gPause, GUI* _gQuit);
   import static void SetFonts(FontType fontText, FontType fontTextOut, FontType fontSpeech, FontType fontOutlineSpeech);
+  import static void SetKeys(eLanguage lang,  char key_yes, char key_no);
+  import static void MapButtons() ;
 // ============================= Helper functions ==============================================
   import static int  GetButtonAction(int action);
   import static void DisableGui(); //Disables but does not hide
@@ -191,7 +193,8 @@ struct Verbs {
   // ============================= Verb Action functions ===========================================
   import static bool UsedAction (Action test_action);
   import static bool IsAction(Action test_action);
-  import static void SetActionButtons(Action action, int btn_ID, int sprite, int sprite_highlight, char key);
+  import static void SetActionButton(Action action, Button* btn);
+  import static void LocalizeActionButton(eLanguage lang,  Action action, int sprite, int sprite_highlight, char key);
   import static void SetDefaultAction(Action def_action);
   import static void SetAction(Action new_action);
   import static void SetAlternativeAction(char extension, Action alt_action);
@@ -227,7 +230,7 @@ struct Verbs {
 
   // ============================= translation ====================================================
   import static void TranslateAction(int action, int tr_lang=eLangEN);
-  import static void AdjustLanguage();
+  import static void Localize();
   import static void AdjustGUIText();
 
   // ============================= Extensions  ==========================================
