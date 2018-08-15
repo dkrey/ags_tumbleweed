@@ -76,7 +76,7 @@ enum eGlobCond {
 };
 
 enum Action {
-  eGA_LookAt,
+  eGA_LookAt = 0, //Starting at zero helps avoiding human mistakes when iterating on the enum
   eGA_TalkTo,
   eGA_GiveTo,
   eGA_PickUp,
@@ -91,7 +91,7 @@ enum Action {
 };
 
 enum eLanguage {
-  eLangEN, 
+  eLangEN = 0, //Starting at zero helps avoiding human mistakes when iterating on the enum
   eLangDE,
   eLangES, 
   eLangIT, 
@@ -101,7 +101,7 @@ enum eLanguage {
 };
 
 enum eVerbGuiOptions {
-  eVerbGuiTemplateLanguage,
+  eVerbGuiTemplateLanguage = 0, //Starting at zero helps avoiding human mistakes when iterating on the enum
   eVerbGuiActionLabelColorNormal,
   eVerbGuiActionLabelColorHighlighted,
   eVerbGuiInvUparrowONsprite,
@@ -124,7 +124,7 @@ enum eVerbGuiOptions {
 };
 
 enum eVerbGuiUnhandled {
-  eVerbGuiUnhandledUse, 
+  eVerbGuiUnhandledUse = 0,  //Starting at zero helps avoiding human mistakes when iterating on the enum
   eVerbGuiUnhandledUseInv, 
   eVerbGuiUnhandledLook, 
   eVerbGuiUnhandledLookChar, 
@@ -147,7 +147,7 @@ enum eVerbGuiUnhandled {
 };
 
 enum eDoorStrings{
-  eDoorStringLookAt, 
+  eDoorStringLookAt = 0, //Starting at zero helps avoiding human mistakes when iterating on the enum
   eDoorStringLocked, 
   eDoorStringWrongItem,
   eDoorStringCloseFirst,
@@ -179,7 +179,7 @@ struct Verbs {
   import static void SetKeys(eLanguage lang,  char key_yes, char key_no);
   import static void MapButtons() ;
 // ============================= Helper functions ==============================================
-  import static int  GetButtonAction(int action);
+  import static int  GetButtonAction(Button* button);
   import static void DisableGui(); //Disables but does not hide
   import static void EnableGui(); //Enables but does not show
   import static bool IsGuiDisabled();
