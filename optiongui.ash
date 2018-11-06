@@ -24,25 +24,53 @@
 // SOFTWARE.
 
 // ============================= Load/Save game ===========================================
-#define SAVE_SLOTS 9 
+#ifdef __VERB_GUI_MODULE__ //make sure module's dependencies are here
 
-struct OptionGui {
-  import static attribute int slotSprite;
-  import static attribute int slotSpriteHi;
-  import static void InitSaveDialog();
-  import static void ShowSaveDialog();
-  import static void DisableSaveButtons();
-  import static void EnableSaveButtons();
-  import static void SelectSaveSlot(int control_id);
+    #define __OPTION_GUI_MODULE__ //Tell the other modules that this module is available
+    
+    #define SAVE_SLOTS 9 
+
+    struct CustomSave {
+      import static attribute int slotSprite;
+      import static attribute int slotSpriteHi;
+      import static attribute FontType font;
+      
+      import static void SetGui(GUI* gui,  GUI* confirmGui = 0);
+      
+      import static void InitSaveDialog();
+      import static void ShowSaveDialog();
+      import static void DisableSaveButtons();
+      import static void EnableSaveButtons();
+      import static void SelectSaveSlot(int control_id);
+      
+      import static void SaveNo();
+      import static void SaveYes();
+      import static void SaveCancel();
+    };
+    
+    struct CustomLoad {
+      import static attribute int slotSprite;
+      import static attribute int slotSpriteHi;
+      import static attribute FontType font;
+      
+      import static void SetGui(GUI* gui,  GUI* confirmGui = 0);
+      
+      import static void InitLoadDialog();
+      import static void ShowLoadDialog();
+      import static void SelectLoadSlot(int control_id);
   
-  import static void SaveNo();
-  import static void SaveYes();
-  import static void SaveCancel();
-  import static void InitLoadDialog();
-  import static void ShowLoadDialog();
-  import static void LoadCancel();
-  import static void SelectLoadSlot(int control_id);
-  import static void ShowOptions();
-  import static void CreateScreenshot();
-  import static void clicked_OptionsClose();
-};
+      import static void LoadCancel();
+    };
+    
+    
+    struct OptionGui {
+   
+      import static void Default();
+
+      import static void CreateScreenshot(FontType font);
+      
+      import static void ShowOptions();
+      import static void OnClick(GUIControl *control, MouseButton button);
+      import static void OnSliderChange(GUIControl *control);
+    };
+#endif

@@ -185,7 +185,7 @@ Unhandled Events
 
 In order to give a the player a feedback for actions the author hasn't thought of, unhandled events come into play.
 With a single function, you can achieve something like "That doesn't work" or "I can't pull that",
-which makes a game much more authentic and alive. The messages itself are defined outside of this function, initially in the TemplateSettings.asc
+which makes a game much more authentic and alive. The messages itself are defined outside of this function, initially in TemplateSettings.asc
 
 
 .. _Unhandled:

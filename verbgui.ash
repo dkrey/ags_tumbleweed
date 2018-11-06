@@ -1,8 +1,10 @@
 // Tumbleweed Verbs
-// Version: 1.1
+// Version: 1.2
 //
-// Author: 
+// Main author: 
 //   abstauber
+// With contributions from:
+//   Monsieur Ouxx, Crimson Wizard
 //
 // Legacy authors:
 //   Proskrito, Rulaman, Lucasfan, Khris
@@ -63,7 +65,9 @@
 
 //----------------------------------------------------------------------------
 
-        
+#define __VERB_GUI_MODULE__ //Tell the other modules that this module is available
+
+
 enum eGlobCond {
   eGlob_MouseInvWalk,
   eGlob_MouseInvPickup, 
@@ -74,7 +78,7 @@ enum eGlobCond {
 };
 
 enum Action {
-  eGA_LookAt,
+  eGA_LookAt = 0, //Starting at zero helps avoiding human mistakes when iterating on the enum
   eGA_TalkTo,
   eGA_GiveTo,
   eGA_PickUp,
@@ -89,7 +93,7 @@ enum Action {
 };
 
 enum eLanguage {
-  eLangEN, 
+  eLangEN = 0, //Starting at zero helps avoiding human mistakes when iterating on the enum
   eLangDE,
   eLangES, 
   eLangIT, 
@@ -99,7 +103,7 @@ enum eLanguage {
 };
 
 enum eVerbGuiOptions {
-  eVerbGuiTemplateLanguage,
+  eVerbGuiTemplateLanguage = 0, //Starting at zero helps avoiding human mistakes when iterating on the enum
   eVerbGuiActionLabelColorNormal,
   eVerbGuiActionLabelColorHighlighted,
   eVerbGuiInvUparrowONsprite,
@@ -122,7 +126,7 @@ enum eVerbGuiOptions {
 };
 
 enum eVerbGuiUnhandled {
-  eVerbGuiUnhandledUse, 
+  eVerbGuiUnhandledUse = 0,  //Starting at zero helps avoiding human mistakes when iterating on the enum
   eVerbGuiUnhandledUseInv, 
   eVerbGuiUnhandledLook, 
   eVerbGuiUnhandledLookChar, 
@@ -145,7 +149,7 @@ enum eVerbGuiUnhandled {
 };
 
 enum eDoorStrings{
-  eDoorStringLookAt, 
+  eDoorStringLookAt = 0, //Starting at zero helps avoiding human mistakes when iterating on the enum
   eDoorStringLocked, 
   eDoorStringWrongItem,
   eDoorStringCloseFirst,
@@ -169,16 +173,21 @@ import void EnterRoom(this Character*, int newRoom, int x, int y, CharacterDirec
 
 // ============================= Verb GUI functions ============================================
 struct Verbs {
+// ============================= Module Configuration ==========================================
   import static attribute int VerbGuiOptions[];
   import static attribute String VerbGuiUnhandled[];
-  
+  import static void BindGuis(GUI* _gAction, GUI* _gMain, GUI* _gPause, GUI* _gQuit);
+  import static void SetFonts(FontType fontText, FontType fontTextOut, FontType fontSpeech, FontType fontOutlineSpeech);
+  import static void SetKeys(eLanguage lang,  char key_yes, char key_no);
+  import static void MapButtons() ;
 // ============================= Helper functions ==============================================
-  import static float Distance(int x1, int y1, int x2, int y2);
-  import static int  Offset(int point1, int point2);
-  import static int  GetButtonAction(int action);
-  import static void DisableGui();
-  import static void EnableGui();
+  import static int  GetButtonAction(Button* button);
+  import static void DisableGui(); //Disables but does not hide
+  import static void EnableGui(); //Enables but does not show
   import static bool IsGuiDisabled();
+  import static void ShowGui(); //Shows and enables
+  import static void HideGui(); //Hides and disables
+  import static bool IsGuiVisible();
   import static int  GlobalCondition(eGlobCond condition);
   import static void InitGuiLanguage();  
   import static void HandleInvArrows();  
@@ -186,7 +195,8 @@ struct Verbs {
   // ============================= Verb Action functions ===========================================
   import static bool UsedAction (Action test_action);
   import static bool IsAction(Action test_action);
-  import static void SetActionButtons(Action action, int btn_ID, int sprite, int sprite_highlight, char key);
+  import static void SetActionButton(Action action, Button* btn);
+  import static void LocalizeActionButton(eLanguage lang,  Action action, int sprite, int sprite_highlight, char key);
   import static void SetDefaultAction(Action def_action);
   import static void SetAction(Action new_action);
   import static void SetAlternativeAction(char extension, Action alt_action);
@@ -194,6 +204,8 @@ struct Verbs {
   import static void UpdateActionBar();
   import static void AdjustActionBarPosition();
   import static void ToogleGuiStyle(int enable_new);
+  import static Action GetUsedAction();
+  import static InventoryItem* GetItemGiven();
 
   // ============================= Player/character functions =======================================
   import static void FreezePlayer();
@@ -220,7 +232,7 @@ struct Verbs {
 
   // ============================= translation ====================================================
   import static void TranslateAction(int action, int tr_lang=eLangEN);
-  import static void AdjustLanguage();
+  import static void Localize();
   import static void AdjustGUIText();
 
   // ============================= Extensions  ==========================================
@@ -230,6 +242,12 @@ struct Verbs {
   import static char Extension();
   import static void OpenCloseExtension(int door_id);
   import static void VariableExtensions();  
+  
 };
 
 
+// ============================= Geometry functions (utility) ============================================
+struct Geometry {
+  import static float Distance(int x1, int y1, int x2, int y2);
+  import static int  Offset(int point1, int point2);
+};
