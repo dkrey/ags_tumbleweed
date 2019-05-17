@@ -8,6 +8,9 @@ Game.agf.user
 backup_acsprset.spr
 _OpenInEditor.lock
 
+# Room user files
+*.crm.user
+
 # Sphinx Documentation folders
 doc/_build
 doc/_static
