@@ -1,5 +1,5 @@
 // Tumbleweed Verbs
-// Version: 1.2
+// Version: 1.3
 //
 // Main author: 
 //   abstauber
@@ -214,6 +214,8 @@ struct Verbs {
   import static int  GoTo(int blocking=2);
   import static void SetApproachingChar(bool enable);
   import static void WalkOffScreen();
+  import static void StartRunning();
+  import static void StopRunning();
 
   // ================ Cancelable, semi-blocking move-player-character functions =====================
   import static int MovePlayer(int x, int y);
