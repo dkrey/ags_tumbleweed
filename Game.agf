@@ -3,6 +3,7 @@
 <AGSEditorDocument Version="3.0.3.2" VersionIndex="15" EditorVersion="3.4.1">
   <Game>
     <Settings>
+      <GameFileName />
       <GameName>Tumbleweed</GameName>
       <UniqueID>86585546</UniqueID>
       <GUIDAsString>{e215320e-251a-40d8-962b-0a348e34ea20}</GUIDAsString>
