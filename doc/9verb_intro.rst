@@ -186,7 +186,7 @@ If you like to create your game in a different language than english, you need t
 
 ::
 
-	int lang = eLangEN;
+	Verbs.VerbGuiOptions[eVerbGuiTemplateLanguage] = eLangEN;
 
 At the time of writing, valid values are: eLangEN, eLangES, eLangFR, eLangDE and eLandNL. Setting this variable to one of these values will translate all your GUIs,
 including all provided dialogs. The unhandled events will stay unchanged however. Those are still needed to be changed directly.
@@ -196,4 +196,4 @@ To switch the language in a .trs translation file, tell your translators to look
 
 	GUI_LANGUAGE
 
-Now simply translate that line with *DE, EN, ES, FR, PT or NL* to set the GUI to the corresponding language.
+Now simply translate that line to *EN, DE, ES, FR, IT, PT or NL* to set the GUI to the corresponding language.
