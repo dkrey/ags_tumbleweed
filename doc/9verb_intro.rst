@@ -180,20 +180,29 @@ No additional walking will occur. This is useful for exits not being at the scre
 Language & Translation
 ======================
 
-Currently the GUI supports German, French, Spanish, Portuguese and Dutch. If you like to help translating this template, please drop me a PM at the AGS Forums.
+Currently the GUI supports German, French, Spanish, Italian, Portuguese and Dutch. If you like to help translating this template, please drop me a PM at the AGS Forums.
 
-If you like to create your game in a different language than english, you need to set it up. In the TemplateSettings.asc module you'll find the line:
+If you like to create your game in a different language than English, you need to setup a different default language. In the TemplateSettings.asc module you'll find the line:
 
 ::
 
 	Verbs.VerbGuiOptions[eVerbGuiTemplateLanguage] = eLangEN;
 
-At the time of writing, valid values are: eLangEN, eLangES, eLangFR, eLangDE and eLandNL. Setting this variable to one of these values will translate all your GUIs,
-including all provided dialogs. The unhandled events will stay unchanged however. Those are still needed to be changed directly.
-To switch the language in a .trs translation file, tell your translators to look out for the line.
+At the time of writing, valid values are: eLangEN, eLangDE, eLangES, eLangFR, eLangIT, eLangPT, eLangNL. Setting this variable to one of these values will translate all your GUIs,
+including all provided dialogs, unhandled events and verb actions.
+
+If you are providing a multilanguage game, which default language is English instead, you will probably create one or more AGS translation files. Sadly AGS won't automatically change GUI graphics by the language preference set by running the game setup, but we got you covered with this: after generating a new language, tell your translators to look out for the line.
 
 ::
 
 	GUI_LANGUAGE
 
-Now simply translate that line to *EN, DE, ES, FR, IT, PT or NL* to set the GUI to the corresponding language.
+Now simply put a translation for that line chosing between *EN, DE, ES, FR, IT, PT or NL*.
+For example:
+
+::
+
+	GUI_LANGUAGE
+	DE
+
+Now the GUI will be set to the corresponding language when the user selects a different language by running game setup.
