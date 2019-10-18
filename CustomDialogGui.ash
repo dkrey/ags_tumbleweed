@@ -93,4 +93,5 @@ import void prepare(static CustomDialogGui, DialogOptionsRenderingInfo *info); /
 import void addOption(static CustomDialogGui, int position, int optionNumber, String optionText); // $AUTOCOMPLETEIGNORE$
 import void getOptionDetails(static CustomDialogGui, DialogOptionsRenderingInfo *info); // $AUTOCOMPLETEIGNORE$
 import void getRowCount(static CustomDialogGui, int width); // $AUTOCOMPLETEIGNORE$
+import void resetScrollPosition(static CustomDialogGui);
 
