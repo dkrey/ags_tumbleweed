@@ -99,7 +99,8 @@ enum eLanguage {
   eLangIT, 
   eLangFR, 
   eLangPT, 
-  eLangNL
+  eLangNL,
+  eLangSE
 };
 
 enum eVerbGuiOptions {
