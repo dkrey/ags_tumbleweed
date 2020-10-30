@@ -30,6 +30,7 @@
 //   Italian - Paolo, Bicilotti
 //   Portuguese - Miguel
 //   Dutch   - arj0n
+//   Swedish - Olleh19
 //
 //
 // Contact and Support: 
