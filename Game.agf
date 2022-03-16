@@ -17,7 +17,7 @@
       <BackwardsText>False</BackwardsText>
       <BinaryFilesInSourceControl>False</BinaryFilesInSourceControl>
       <BuildTargets>Windows</BuildTargets>
-      <ClipGUIControls>False</ClipGUIControls>
+      <ClipGUIControls>True</ClipGUIControls>
       <ColorDepth>TrueColor</ColorDepth>
       <CompressSpritesType>None</CompressSpritesType>
       <CrossfadeMusic>No</CrossfadeMusic>
@@ -69,7 +69,7 @@
       <SaveGameFileExtension />
       <SaveGameFolderName>Tumbleweed</SaveGameFolderName>
       <SaveScreenshots>True</SaveScreenshots>
-      <ScaleMovementSpeedWithMaskResolution>True</ScaleMovementSpeedWithMaskResolution>
+      <ScaleMovementSpeedWithMaskResolution>False</ScaleMovementSpeedWithMaskResolution>
       <ScriptAPIVersion>Highest</ScriptAPIVersion>
       <ScriptCompatLevel>Highest</ScriptCompatLevel>
       <SkipSpeech>MouseOrKeyboardOrTimer</SkipSpeech>
@@ -1330,15 +1330,15 @@
                 <Font>3</Font>
                 <Height>12</Height>
                 <ID>13</ID>
-                <Left>55</Left>
+                <Left>57</Left>
                 <Locked>False</Locked>
                 <Name>lblOptionsGuiClassic</Name>
                 <Text>Classic</Text>
-                <TextAlignment>Right</TextAlignment>
+                <TextAlignment>Center</TextAlignment>
                 <TextColor>33808</TextColor>
                 <Top>132</Top>
                 <Visible>True</Visible>
-                <Width>38</Width>
+                <Width>39</Width>
                 <ZOrder>13</ZOrder>
               </GUILabel>
               <GUILabel>
@@ -1347,15 +1347,15 @@
                 <Font>3</Font>
                 <Height>9</Height>
                 <ID>14</ID>
-                <Left>148</Left>
+                <Left>145</Left>
                 <Locked>False</Locked>
                 <Name>lblOptionsGuiModern</Name>
                 <Text>Modern</Text>
-                <TextAlignment>Left</TextAlignment>
+                <TextAlignment>Center</TextAlignment>
                 <TextColor>33808</TextColor>
                 <Top>132</Top>
                 <Visible>True</Visible>
-                <Width>38</Width>
+                <Width>39</Width>
                 <ZOrder>14</ZOrder>
               </GUILabel>
             </Controls>
