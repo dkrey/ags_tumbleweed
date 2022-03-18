@@ -993,7 +993,7 @@
                 <Clickable>True</Clickable>
                 <Enabled>True</Enabled>
                 <Font>4</Font>
-                <Height>10</Height>
+                <Height>12</Height>
                 <ID>0</ID>
                 <Left>0</Left>
                 <Locked>False</Locked>
