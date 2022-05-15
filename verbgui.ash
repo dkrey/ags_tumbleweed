@@ -1,10 +1,10 @@
 // Tumbleweed Verbs
-// Version: 1.3
+// Version: 1.4
 //
 // Main author: 
 //   abstauber
 // With contributions from:
-//   Monsieur Ouxx, Crimson Wizard
+//   Monsieur Ouxx, Crimson Wizard, eri0o
 //
 // Legacy authors:
 //   Proskrito, Rulaman, Lucasfan, Khris
