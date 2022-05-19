@@ -41,6 +41,7 @@ enum eDialogGuiOptions {
   eDialogGui_text_alignment, 
   eDialogGui_text_color, 
   eDialogGui_text_color_active, 
+  eDialogGui_text_color_chosen, 
   eDialogGui_text_bg, 
   eDialogGui_text_bg_xpos, 
   eDialogGui_text_bg_scaling, 
