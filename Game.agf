@@ -7082,7 +7082,7 @@ stop
                     <Name>Dialogscript</Name>
                     <Description>simplified fork of CDG</Description>
                     <Author>abstauber</Author>
-                    <Version>1.3</Version>
+                    <Version>1.4</Version>
                     <Key>551174665</Key>
                     <IsHeader>False</IsHeader>
                   </Script>
@@ -7106,7 +7106,7 @@ stop
                     <Name>Tumbleweed Verbs</Name>
                     <Description>GUI functions</Description>
                     <Author>Authors named in header file</Author>
-                    <Version>1.3</Version>
+                    <Version>1.4</Version>
                     <Key>1562295785</Key>
                     <IsHeader>False</IsHeader>
                   </Script>
