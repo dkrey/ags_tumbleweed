@@ -96,7 +96,7 @@
       <CustomAppDataPath IsNull="True" />
       <CustomSavePath />
       <DigitalSound>Default</DigitalSound>
-      <FullscreenDesktop>False</FullscreenDesktop>
+      <FullscreenDesktop>True</FullscreenDesktop>
       <FullscreenGameScaling>ProportionalStretch</FullscreenGameScaling>
       <GameScaling>MaxInteger</GameScaling>
       <GameScalingMultiplier>1</GameScalingMultiplier>
