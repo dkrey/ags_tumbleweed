@@ -37,7 +37,7 @@
       <BlendMode>Normal</BlendMode>
       <Clickable>True</Clickable>
       <Description xml:space="preserve">Blue Cup&gt;p</Description>
-      <EffectiveBaseline>0</EffectiveBaseline>
+      <EffectiveBaseline>107</EffectiveBaseline>
       <Enabled>True</Enabled>
       <Image>79</Image>
       <Name>oBlueCup</Name>

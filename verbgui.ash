@@ -202,7 +202,7 @@ struct Verbs {
   import static void SetDefaultAction(Action def_action);
   import static void SetAction(Action new_action);
   import static void SetAlternativeAction(char extension, Action alt_action);
-  import static void CheckDefaultAction();
+  import static void CheckDefaultAction(bool disabled = false);
   import static void UpdateActionBar();
   import static void AdjustActionBarPosition();
   import static void ToogleGuiStyle(int enable_new);

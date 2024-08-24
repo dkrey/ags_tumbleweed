@@ -37,13 +37,13 @@
       <BlendMode>Normal</BlendMode>
       <Clickable>True</Clickable>
       <Description>Holodoor&gt;o</Description>
-      <EffectiveBaseline>0</EffectiveBaseline>
-      <Enabled>False</Enabled>
+      <EffectiveBaseline>161</EffectiveBaseline>
+      <Enabled>True</Enabled>
       <Image>118</Image>
       <Name>oDoor</Name>
       <Properties />
       <StartX>304</StartX>
-      <StartY>160</StartY>
+      <StartY>161</StartY>
       <UseRoomAreaLighting>False</UseRoomAreaLighting>
       <UseRoomAreaScaling>False</UseRoomAreaScaling>
       <Visible>False</Visible>
