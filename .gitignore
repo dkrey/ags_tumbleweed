@@ -11,6 +11,9 @@ _OpenInEditor.lock
 # Room user files
 *.crm.user
 
+# Room files in general
+*.crm
+
 # Sphinx Documentation folders
 doc/_build
 doc/_static
