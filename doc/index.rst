@@ -17,6 +17,7 @@ Welcome to the Tumbleweed Verbs documentation!
    9verb_door
    9verb_translation
    9verb_extension
+   9verb_dialog_gui
    9verb_changes
 
 
