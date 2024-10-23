@@ -11,8 +11,12 @@ _OpenInEditor.lock
 # Room user files
 *.crm.user
 
-# Room files in general
+# Compiled Room files
 *.crm
+
+# Runtime output
+*.dmp
+*.log
 
 # Sphinx Documentation folders
 doc/_build
