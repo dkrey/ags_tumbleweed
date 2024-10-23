@@ -228,7 +228,7 @@ struct Verbs {
   import static int AnyClickMove(int x, int y, CharacterDirection dir);
   import static int AnyClickWalk(int x, int y, CharacterDirection dir);
   import static int AnyClickWalkLook(int x, int y, CharacterDirection dir, String lookat);
-  import static int AnyClickWalkLookPick(int x, int y, CharacterDirection dir, String lookat, int objectID, InventoryItem*item, AudioClip *sound=false);
+  import static int AnyClickWalkLookPick(int x, int y, CharacterDirection dir, String lookat, int objectID, InventoryItem*item, AudioClip *sound=null);
   import static int AnyClickUseInv (InventoryItem*item, int x, int y, CharacterDirection dir);
   
   // ============================= Unhandled Events =================================================
