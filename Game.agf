@@ -59,7 +59,7 @@
       <ScaleCharacterSpriteOffsets>True</ScaleCharacterSpriteOffsets>
       <ScriptAPIVersion>Highest</ScriptAPIVersion>
       <ScriptCompatLevel>Highest</ScriptCompatLevel>
-      <ScriptCompiler xml:space="preserve">AGS SCOM 3 EXT</ScriptCompiler>
+      <ScriptCompiler xml:space="preserve">AGS SCOM 4</ScriptCompiler>
       <SkipSpeech>MouseOrKeyboardOrTimer</SkipSpeech>
       <SpeechPortraitSide>Left</SpeechPortraitSide>
       <SpeechStyle>Lucasarts</SpeechStyle>

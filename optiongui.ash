@@ -35,7 +35,7 @@
       import static attribute int slotSpriteHi;
       import static attribute FontType font;
       
-      import static void SetGui(GUI* gui,  GUI* confirmGui = 0);
+      import static void SetGui(GUI* gui,  GUI* confirmGui = null);
       
       import static void InitSaveDialog();
       import static void ShowSaveDialog();
@@ -53,7 +53,7 @@
       import static attribute int slotSpriteHi;
       import static attribute FontType font;
       
-      import static void SetGui(GUI* gui,  GUI* confirmGui = 0);
+      import static void SetGui(GUI* gui,  GUI* confirmGui = null);
       
       import static void InitLoadDialog();
       import static void ShowLoadDialog();
