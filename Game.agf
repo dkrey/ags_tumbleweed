@@ -2517,31 +2517,27 @@ stop
     </Cursors>
     <FontFiles>
       <FontFile>
-        <FileName>agsfnt0.ttf</FileName>
-        <SourceFilename>assets/xpaider2.ttf</SourceFilename>
+        <FileName>adventure2.ttf</FileName>
+        <SourceFilename>Fonts/adventure2.ttf</SourceFilename>
       </FontFile>
       <FontFile>
-        <FileName>agsfnt1.ttf</FileName>
-        <SourceFilename>assets/adventure2.ttf</SourceFilename>
+        <FileName>arcade.ttf</FileName>
+        <SourceFilename>Fonts/arcade.ttf</SourceFilename>
       </FontFile>
       <FontFile>
-        <FileName>agsfnt2.ttf</FileName>
-        <SourceFilename>assets/arcade.ttf</SourceFilename>
+        <FileName>font.wfn</FileName>
+        <SourceFilename>Fonts/font.wfn</SourceFilename>
       </FontFile>
       <FontFile>
-        <FileName>agsfnt3.wfn</FileName>
-        <SourceFilename>assets/xpaider2.ttf</SourceFilename>
-      </FontFile>
-      <FontFile>
-        <FileName>agsfnt4.ttf</FileName>
-        <SourceFilename>assets/xpaider2.ttf</SourceFilename>
+        <FileName>xpaider2.ttf</FileName>
+        <SourceFilename>Fonts/xpaider2.ttf</SourceFilename>
       </FontFile>
     </FontFiles>
     <Fonts>
       <Font>
         <AutoOutlineStyle>Squared</AutoOutlineStyle>
         <AutoOutlineThickness>1</AutoOutlineThickness>
-        <FontFileName>agsfnt0.ttf</FontFileName>
+        <FontFileName>xpaider2.ttf</FontFileName>
         <ID>0</ID>
         <LineSpacing>0</LineSpacing>
         <Name>TumbleText</Name>
@@ -2555,7 +2551,7 @@ stop
       <Font>
         <AutoOutlineStyle>Squared</AutoOutlineStyle>
         <AutoOutlineThickness>1</AutoOutlineThickness>
-        <FontFileName>agsfnt1.ttf</FontFileName>
+        <FontFileName>adventure2.ttf</FontFileName>
         <ID>1</ID>
         <LineSpacing>0</LineSpacing>
         <Name>TumbleSpeech</Name>
@@ -2569,7 +2565,7 @@ stop
       <Font>
         <AutoOutlineStyle>Squared</AutoOutlineStyle>
         <AutoOutlineThickness>1</AutoOutlineThickness>
-        <FontFileName>agsfnt2.ttf</FontFileName>
+        <FontFileName>arcade.ttf</FontFileName>
         <ID>2</ID>
         <LineSpacing>0</LineSpacing>
         <Name>TumbleOutlineSpeech</Name>
@@ -2583,7 +2579,7 @@ stop
       <Font>
         <AutoOutlineStyle>Squared</AutoOutlineStyle>
         <AutoOutlineThickness>1</AutoOutlineThickness>
-        <FontFileName>agsfnt3.wfn</FontFileName>
+        <FontFileName>font.wfn</FontFileName>
         <ID>3</ID>
         <LineSpacing>0</LineSpacing>
         <Name>TumbleTiny</Name>
@@ -2597,7 +2593,7 @@ stop
       <Font>
         <AutoOutlineStyle>Squared</AutoOutlineStyle>
         <AutoOutlineThickness>1</AutoOutlineThickness>
-        <FontFileName>agsfnt4.ttf</FontFileName>
+        <FontFileName>xpaider2.ttf</FontFileName>
         <ID>4</ID>
         <LineSpacing>0</LineSpacing>
         <Name>TumbleTextOut</Name>
