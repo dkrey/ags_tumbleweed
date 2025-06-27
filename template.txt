@@ -1,4 +1,3 @@
-Welcome to the Tumbleweed Verbs template!
-When using this template, make sure you take a look at the "tumbleweedverbs.pdf" manual so that you understand how to use it!
+Tumbleweed Verbs
 
-Have fun!
+This template features a SCUMM-style interface inspired by Thimbleweed Park (by Terrible Toybox, Inc.) and other games with the called "Nine Verbs" UI. It features a grid of verb buttons (Walk To, Look At, Use, Talk To, ...) and an inventory at the bottom of the screen. Due to its unique structure, using this template may require adapting your usual AGS workflow. Read the Tumbleweed section in the AGS Manual to get started. Have fun!
