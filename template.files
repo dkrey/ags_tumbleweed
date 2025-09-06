@@ -1,0 +1,38 @@
+# Tumbleweed template include/exclude list
+
+Game.agf
+*.asc
+*.ash
+*.txt
+# Have to include the spriteset file, because the AGS Editor reports
+# a missing spriteset as a error (even if source files are present)
+acsprset.spr
+sprindex.dat
+# Fonts in their folder since AGS 4.0
+Fonts/*.ttf
+Fonts/*.wfn
+# Rooms as folders since AGS 4.0
+Rooms/*/data.xml
+Rooms/*/*.png
+Rooms/*/room*.asc
+# Sprite assets folder
+assets/
+# May not be used in a particular template, but still mention it
+# in case another template is created based on this
+Speech/
+# Template meta files
+template.ico
+template.txt
+template.files
+tumbleweedverbs.pdf
+
+# Ignore generated folders, output files, user settings and backups
+!_Debug/
+!Compiled/
+!*.crm
+!*.bak
+!*.user
+!*.lock
+
+# Ignore audio cache folder, because sounds may be restored from sources
+!AudioCache
